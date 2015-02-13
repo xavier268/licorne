@@ -21,7 +21,7 @@ RUN yum clean all
 
 RUN useradd lambda
 USER lambda
-RUN ECHO "User name is : lambda"
+
 RUN ["java","-version"]
 
 
