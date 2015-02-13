@@ -19,6 +19,7 @@ RUN yum -y install jdk-8u31-linux-x64.rpm
 RUN rm jdk-8u31-linux-x64.rpm 
 RUN yum clean all
 
+RUN useradd lambda
 USER lambda
 RUN ECHO "User name is : lambda"
 RUN ["java","-version"]

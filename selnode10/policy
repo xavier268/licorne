@@ -1,10 +1,10 @@
-// Ajout pour firefox et selenium
+
 
 # Extra java policy lines
 # This will be added at the end of $JAVA_HOME/lib/security/java.policy
 
 # Xavier Gandillot <xavier@gandillot.com>
-# 18/12/2014
+# 13/2/2015
 
 # Allow any connection to any port
 grant {
@@ -34,7 +34,7 @@ grant {
   permission java.util.PropertyPermission "java.vm.name", "read";
 };
 
-// Ajout pour firefox et selenium
+
 
 grant {
     permission java.lang.RuntimePermission "getenv.*" , "read" ;

@@ -1,10 +1,10 @@
 # Oracle java SE8 jdk and Selenium Server on centos
-# 24 nov 2014
+# 13/2/2015
 
-FROM xavier268/centos-ec2-jdk8:latest
+FROM xavier268/jdk8:latest
 MAINTAINER Xavier Gandillot <xavier@gandillot.com>
 
-# Chargement Xvfb et firefox
+# Load Xvfb et firefox
 USER root
 RUN yum -y update
 RUN yum -y install -y xorg-x11-server-Xvfb libXfont firefox wget
@@ -35,8 +35,10 @@ RUN chown root /tmp/.X11-unix
 
 
 USER lambda
+EXPOSE 4444
+
 CMD /home/lambda/run.sh && /bin/bash
 
-EXPOSE 4444
+
 
 
