@@ -1,6 +1,6 @@
 # xavier268/db-data
 # Data volume to manage derby databases folder
-# 21 fev 2015
+# 6 / 3 / 2015
 
 # Create container with : docker run -it --name datacontainerName xavier268/db-data
 # Use container by : docker run --volumes-from datacontainerName ...
