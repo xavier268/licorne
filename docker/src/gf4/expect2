@@ -1,0 +1,12 @@
+#!/usr/bin/expect
+
+# Enables the secure admin mode
+# Xavier Gandillot <xavier@gandillot.com>
+# 24/09/2014
+
+spawn ./asadmin --user admin enable-secure-admin
+expect "password"
+send "changethispassword\n"
+expect eof
+exit
+
