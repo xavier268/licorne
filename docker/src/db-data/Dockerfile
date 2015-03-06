@@ -1,3 +1,4 @@
+# xavier268/db-data
 # Data volume to manage derby databases folder
 # 21 fev 2015
 
@@ -7,7 +8,7 @@
 # Export, if you really want to, to the host with docker cp datacontainerName:/home/lambda/glassfish4/glassfish/databases/ /host/dest
 # DO NOT USE docker export, after committing the data-container - il will not contain the data from the volume !!
 
-FROM xavier268/gf4
+FROM xavier268/gf41:latest
 
 MAINTAINER Xavier Gandillot <xavier@gandillot.com>
 

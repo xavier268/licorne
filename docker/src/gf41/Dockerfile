@@ -1,4 +1,4 @@
-
+# xavier268/gf41
 # Oracle java SE8 jdk and Glassfish4 on centos
 # 26 sept 2014
 
