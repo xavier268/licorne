@@ -1,3 +1,5 @@
+# xavier268/selnode10:45
+
 # Oracle java SE8 jdk and Selenium Server on centos
 # 6/3/2015
 

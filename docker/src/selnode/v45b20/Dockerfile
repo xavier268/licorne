@@ -1,7 +1,9 @@
+# xavier268/selnode20:45
+
 # Oracle java SE8 jdk and Selenium Server on centos
 # 6/3/2015
 
-FROM xavier268/selnode:v45b10
+FROM xavier268/selnode10:45
 MAINTAINER Xavier Gandillot <xavier@gandillot.com>
 
 # As lambda user
