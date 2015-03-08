@@ -25,11 +25,13 @@ WORKDIR /home/lambda/
 RUN wget http://selenium-release.storage.googleapis.com/2.45/selenium-server-standalone-2.45.0.jar
 
 COPY run.sh /home/lambda/
+COPY runDebug.sh /home/lambda/
 COPY node.json /home/lambda/
 COPY hub.json /home/lambda/
 
 USER root
 RUN chmod +x /home/lambda/run.sh
+RUN chmod +x /home/lambda/runDebug.sh
 
 # Needed for Xvfb
 RUN mkdir /tmp/.X11-unix
