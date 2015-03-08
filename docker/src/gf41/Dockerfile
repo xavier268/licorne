@@ -8,7 +8,7 @@ MAINTAINER Xavier Gandillot <xavier@gandillot.com>
 # As root
 USER root
 RUN yum -y update
-RUN yum -y install unzip expect
+RUN yum -y install unzip expect && yum clean all
 
 # adjust java policy
 COPY policy /policy
