@@ -7,8 +7,7 @@ MAINTAINER Xavier Gandillot <xavier@gandillot.com>
 
 # As root
 USER root
-RUN yum -y update
-RUN yum -y install unzip expect && yum clean all
+RUN yum -y update && yum -y install unzip expect && yum clean all
 
 # adjust java policy
 COPY policy /policy
@@ -19,9 +18,9 @@ RUN rm /policy
 USER lambda
 WORKDIR /home/lambda/
 
-RUN wget dlc.sun.com.edgesuite.net/glassfish/4.1/release/glassfish-4.1.zip
-RUN unzip glassfish-4.1.zip
-RUN rm glassfish-4.1.zip
+RUN wget dlc.sun.com.edgesuite.net/glassfish/4.1/release/glassfish-4.1.zip && \
+unzip glassfish-4.1.zip && \
+rm glassfish-4.1.zip
 
 #prepare files
 

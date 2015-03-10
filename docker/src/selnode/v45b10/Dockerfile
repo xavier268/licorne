@@ -8,14 +8,11 @@ MAINTAINER Xavier Gandillot <xavier@gandillot.com>
 
 # Load Xvfb et firefox
 USER root
-RUN yum -y update
-RUN yum -y install -y xorg-x11-server-Xvfb libXfont firefox wget
-RUN yum clean all
+RUN yum -y update && yum -y install -y xorg-x11-server-Xvfb libXfont firefox wget && yum clean all
 
 # adjust java policy
 ADD policy /policy
-RUN cat /policy >> /usr/java/default/jre/lib/security/java.policy
-RUN rm /policy
+RUN cat /policy >> /usr/java/default/jre/lib/security/java.policy && rm /policy
 
 # As lambda user
 USER lambda
