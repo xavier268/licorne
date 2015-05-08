@@ -31,7 +31,7 @@ RUN chmod +x /home/lambda/run.sh
 RUN chmod +x /home/lambda/runDebug.sh
 
 # Needed for Xvfb
-RUN mkdir /tmp/.X11-unix
+RUN mkdir -p /tmp/.X11-unix
 RUN chmod 1777 /tmp/.X11-unix
 RUN chown root /tmp/.X11-unix
 
