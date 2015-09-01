@@ -18,7 +18,7 @@ RUN rm /policy
 USER lambda
 WORKDIR /home/lambda/
 
-RUN wget dlc.sun.com.edgesuite.net/glassfish/4.1/release/glassfish-4.1.zip && \
+RUN wget http://download.java.net/glassfish/4.1/release/glassfish-4.1.zip && \
 unzip glassfish-4.1.zip && \
 rm glassfish-4.1.zip
 
