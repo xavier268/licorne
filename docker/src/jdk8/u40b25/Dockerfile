@@ -6,7 +6,7 @@
 FROM centos:latest
 MAINTAINER Xavier Gandillot <xavier@gandillot.com>
 
-RUN yum -y update && yum -y install  wget python unzip iptraf && yum clean all
+RUN yum -y update && yum -y install  wget python unzip && yum clean all
 RUN wget https://s3.amazonaws.com/aws-cli/awscli-bundle.zip && \
 unzip awscli-bundle.zip && rm awscli-bundle.zip
 
