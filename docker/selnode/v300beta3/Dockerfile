@@ -24,8 +24,9 @@ COPY hub.json /hub.json
 RUN chmod +x /run.sh && chmod +x /runDebug.sh
 
 # Install Firefox 49
-COPY firefox-49.0.tar.bz2 /
-RUN tar xjf firefox-49.0.tar.bz2 && \
+
+RUN wget /pub/firefox/releases/49.0/linux-x86_64/en-US/firefox-49.0.tar.bz2 &&\
+tar xjf firefox-49.0.tar.bz2 && \
 rm firefox-49.0.tar.bz2 && \
 mv firefox /opt/firefox49 && \
 ln -s /opt/firefox49/firefox /usr/bin/firefox
