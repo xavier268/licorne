@@ -1,0 +1,51 @@
+
+
+# Extra java policy lines
+# This will be added at the end of $JAVA_HOME/lib/security/java.policy
+
+# Xavier Gandillot <xavier@gandillot.com>
+# 26/9/2016
+
+# Allow any connection to any port
+grant {
+	permission java.net.SocketPermission "*","connect,accept,listen";
+	};
+
+# Allow read property permissions
+grant {
+  permission java.util.PropertyPermission "java.version", "read";
+  permission java.util.PropertyPermission "java.vendor", "read";
+  permission java.util.PropertyPermission "java.vendor.url", "read";
+  permission java.util.PropertyPermission "java.class.version", "read";
+  permission java.util.PropertyPermission "os.name", "read";
+  permission java.util.PropertyPermission "os.version", "read";
+  permission java.util.PropertyPermission "os.arch", "read";
+  permission java.util.PropertyPermission "file.separator", "read";
+  permission java.util.PropertyPermission "path.separator", "read";
+  permission java.util.PropertyPermission "line.separator", "read";
+  permission java.util.PropertyPermission "java.specification.version", "read";
+  permission java.util.PropertyPermission "java.specification.vendor", "read";
+  permission java.util.PropertyPermission "java.specification.name", "read";
+  permission java.util.PropertyPermission "java.vm.specification.version", "read";
+  permission java.util.PropertyPermission "java.vm.specification.vendor", "read";
+  permission java.util.PropertyPermission "java.vm.specification.name", "read";
+  permission java.util.PropertyPermission "java.vm.version", "read";
+  permission java.util.PropertyPermission "java.vm.vendor", "read";
+  permission java.util.PropertyPermission "java.vm.name", "read";
+};
+
+
+
+grant {
+    permission java.lang.RuntimePermission "getenv.*" , "read" ;
+    permission java.io.FilePermission "/usr/bin/firefox" , "execute" ;
+    permission java.util.logging.LoggingPermission "control";
+    permission java.net.SocketPermission "localhost:*" , "listen, resolve";
+    permission java.lang.RuntimePermission "*";
+    permission java.net.NetPermission "*";
+    permission java.net.URLPermission "http:*" , "*";
+    permission java.net.URLPermission "https:*" , "*";
+    permission org.osgi.framework.AdminPermission "*" , "*";
+    permission java.lang.reflect.ReflectPermission "*";
+    };
+
