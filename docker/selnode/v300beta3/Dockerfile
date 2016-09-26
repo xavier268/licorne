@@ -4,7 +4,7 @@
 FROM centos:7
 MAINTAINER Xavier Gandillot<xavier@gandillot.com>
 
-# Load Xvfb et firefox
+# Load Xvfb, java8, and various utilities and dependencies
 USER root
 RUN yum -y update && \
 yum -y install -y xorg-x11-server-Xvfb libXfont wget java-1.8.0-openjdk bzip2 tar gtk3 && \
@@ -46,7 +46,8 @@ RUN cat /policy >> /usr/lib/jvm/jre-1.8.0/lib/security/java.policy && rm /policy
 # Open ports
 EXPOSE 4444
 
-# Lauch nodes and saty in the foreground with bash
+# Lauch nodes and stay in the foreground with bash
+# For debugging purposes, run manually /runDebug.sh instead
 CMD /run.sh && /bin/bash
 
 
