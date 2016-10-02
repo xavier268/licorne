@@ -46,7 +46,7 @@ Create a named volume
 
 ... and use this newly created volume to host the database content, or share it with multiple containers
 
-**docker run -d -p 27000:27017 -v volume1:/data/db xavier268/mongo**
+**docker run -d -p 27000:27017 -v volume1:/data/db xavier268/mongodb**
 
 
 Attach to the running container (it has no tty, so use exec ) to poke around :
