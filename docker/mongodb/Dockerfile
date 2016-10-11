@@ -1,5 +1,5 @@
 # xavier268/mongodb
-# A MongoDB install on centos:latest
+# A MongoDB install on centos:7 
 
 FROM centos:7
 MAINTAINER Xavier Gandillot <xavier@gandillot.com>
