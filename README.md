@@ -1,5 +1,8 @@
 # Repository for my personal docker images
 
-Oct 2nd, 2016
+AUgust 2017
 
-Xavier
+## Deprecated images 
+
+I don't maintain these images anymore, there no exist offcial / semi official images to do the same thing.
+See xavier268/muDockerScripts for replacement.
